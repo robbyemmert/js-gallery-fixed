@@ -1,0 +1,23 @@
+{
+  "name": "js-gallery-fixed",
+  "description": "A JavaScript plugin for creating a justified gallery for a fixed area.",
+  "main": "dist/js-gallery-fixed.js",
+  "authors": [
+    "Robby Emmert"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "gallery"
+  ],
+  "homepage": "https://github.com/robbyemmert/js-gallery-fixed",
+  "moduleType": [
+    "es6"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
