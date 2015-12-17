@@ -1,10 +1,9 @@
-var world = 'World';
-console.log(`hello ${world}`);
+var $ = require('./modules/jqueryLoader.js');
 
-class Test {
-    constructor(){
-        console.log('BUILDING!');
+class FixedGallery {
+    constructor(element){
+        if (!(element instanceof $)) {
+            element = $(element);
+        }
     }
 }
-
-var a = new Test();
