@@ -1,9 +1,53 @@
-.test {
-    .testing {
-        display: none;
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .aspect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.loaded {
+    display: block;
+}
+
+gallery {
+    @include aspect-ratio(2, 1);
+    display: block;
+    position: relative;
+
+    .row {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: auto;
+        position: relative;
     }
 
-    &.wahoo {
-        color: red;
+    .col {
+        display: block;
+        width: auto;
+        height: 100%;
+    }
+
+    gallery-image {
+        display: block;
+        margin: 0;
+        padding: 0;
+        float: left;
+        width: 100%;
+        height: 100%;
+        transition: all .2s ease;
+        background-position: center;
+        background-size: cover;
     }
 }
